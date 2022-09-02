@@ -2,18 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "../types/interfaces";
 
+import styles from "../styles/ProductCard.module.scss";
+
 const ProductCard = ({ image, title, price }: Product) => {
   return (
-    <div>
+    <div className={styles.product_card}>
+      <div className={styles.image_wrapper}>
+        {image !== undefined && (
+          <Image
+            src={image}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        )}
+      </div>
+
       <Link href="#">
-        <div>
-          {image !== undefined && <Image src={image} alt="" layout="fill" />}
-        </div>
-        <p>{title}</p>
-        <p>
-          <span>{price}</span>
-        </p>
+        <p className={styles.title}>{title}</p>
       </Link>
+      <span className={styles.price}>${price}</span>
     </div>
   );
 };

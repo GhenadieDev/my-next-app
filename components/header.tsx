@@ -7,7 +7,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.burger_wrapper}>
         <MdOutlineReorder className={styles.burger} />
-        <h2>Catalog</h2>
+        <h2 style={{ color: "white" }}>Catalog</h2>
       </div>
       <Input />
     </header>

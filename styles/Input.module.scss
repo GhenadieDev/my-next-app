@@ -2,7 +2,6 @@
   display: flex;
   width: 50%;
   height: 45px;
-  margin-left: auto;
 }
 
 .input {
@@ -11,6 +10,15 @@
   border-radius: 8px 0px 0px 8px;
   font-size: 20px;
   width: 100%;
+  background-color: rgb(38, 38, 38);
+  color: rgb(140, 140, 140);
+  font-size: 1rem;
+  font-weight: 400;
+  caret-color: white;
+
+  &:focus {
+    color: white;
+  }
 }
 
 .search_button {
@@ -29,5 +37,11 @@
 
 .search_button,
 .input {
-  border: 1px solid #e6e6e6;
+  border: none;
+}
+
+@media (max-width: 840px) {
+  .form {
+    width: 80%;
+  }
 }

@@ -1,0 +1,21 @@
+.header {
+  border: 1px solid black;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.burger_wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.burger_wrapper > .burger {
+  font-size: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+}

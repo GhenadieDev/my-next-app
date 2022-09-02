@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  width: 50%;
+  height: 45px;
+  margin-left: auto;
+}
+
+.input {
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 8px 0px 0px 8px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.search_button {
+  outline: none;
+  font-size: 20px;
+  border-radius: 0px 8px 8px 0px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #e6e6e6;
+  }
+}
+
+.search_button,
+.input {
+  border: 1px solid #e6e6e6;
+}

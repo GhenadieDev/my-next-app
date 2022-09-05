@@ -1,13 +1,26 @@
 import Input from "./Input";
-import styles from "../styles/Header.module.scss";
-import { MdOutlineReorder } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-const Header = () => {
+import styles from "../styles/Header.module.scss";
+import { SetStateAction } from "react";
+
+interface Props {
+  setBurgerIsHover?: React.Dispatch<SetStateAction<boolean>>;
+}
+
+const Header = ({ setBurgerIsHover }: Props) => {
   return (
     <header className={styles.header}>
       <div className={styles.burger_wrapper}>
-        <MdOutlineReorder className={styles.burger} />
-        <h2 style={{ color: "white" }}>Catalog</h2>
+        <GiHamburgerMenu
+          className={styles.burger}
+          onMouseOver={() =>
+            setBurgerIsHover !== undefined ? setBurgerIsHover(true) : undefined
+          }
+        />
+        <h2 className={styles.cats} style={{ color: "white" }}>
+          Categories
+        </h2>
       </div>
       <Input />
     </header>

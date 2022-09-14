@@ -30,6 +30,7 @@ export const Products = ({ list = [] }: Props) => {
             image={product.image}
             title={product.title}
             price={product.price}
+            id={product.id}
           />
         ))}
     </ul>

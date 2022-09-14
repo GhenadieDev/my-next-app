@@ -4,7 +4,7 @@ import { Product } from "../../types/interfaces";
 
 import styles from "./ProductCard.module.scss";
 
-export const ProductCard = ({ image, title, price }: Product) => {
+export const ProductCard = ({ image, title, price, id }: Product) => {
   return (
     <div className={styles.product_card}>
       <div className={styles.image_wrapper}>
@@ -19,7 +19,7 @@ export const ProductCard = ({ image, title, price }: Product) => {
         )}
       </div>
 
-      <Link href="#">
+      <Link href={`/products/[id]`} as={`/products/${id}`}>
         <p className={styles.title}>{title}</p>
       </Link>
       <span className={styles.price}>${price}</span>

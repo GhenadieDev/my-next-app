@@ -7,3 +7,4 @@ export * from "./product_card/product_card";
 export * from "./products/products";
 export * from "./select/select";
 export * from "./sortbar/sortbar";
+export * from "./button/button";

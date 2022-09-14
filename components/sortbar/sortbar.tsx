@@ -31,8 +31,8 @@ export const SortBar = ({ allProducts }: Props) => {
       <div className={styles.range_wrapper}>
         <span>Price</span>
         <div className={styles.range}>
-          <input type="number" />
-          <input type="number" />
+          <input placeholder={`min: ${price.minPrice}`} />
+          <input placeholder={`max: ${price.maxPrice}`} />
         </div>
       </div>
       <div className={styles.select_wrapper}>

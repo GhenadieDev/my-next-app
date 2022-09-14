@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { Category, Burger } from "../types/contexts";
+import { Category } from "../../types/contexts";
 
-import styles from "../styles/Categories.module.scss";
+import styles from "./Categories.module.scss";
 
 interface Props {
   categories: string[];
 }
 
-const Categories = ({ categories }: Props) => {
+export const Categories = ({ categories }: Props) => {
   const context = useContext(Category);
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -27,5 +27,3 @@ const Categories = ({ categories }: Props) => {
     </ul>
   );
 };
-
-export default Categories;

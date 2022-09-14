@@ -3,7 +3,7 @@ import Head from "next/head";
 import axios from "axios";
 
 import { Product } from "../types/interfaces";
-import Products from "../components/products";
+import { Products, SortBar } from "../components/index";
 
 const Home: NextPage = ({
   data,
@@ -17,6 +17,7 @@ const Home: NextPage = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <SortBar allProducts={data} />
       <Products list={data} />
     </div>
   );

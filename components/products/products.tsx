@@ -1,15 +1,15 @@
-import { Product } from "../types/interfaces";
-import ProductCard from "./product_card";
-
-import styles from "../styles/Products.module.scss";
-import { Category } from "../types/contexts";
 import { useContext, useEffect, useState } from "react";
+import { Product } from "../../types/interfaces";
+import { Category } from "../../types/contexts";
+import { ProductCard } from "../index";
+
+import styles from "./Products.module.scss";
 
 interface Props {
   list?: Product[];
 }
 
-const Products = ({ list = [] }: Props) => {
+export const Products = ({ list = [] }: Props) => {
   const { category } = useContext(Category);
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -35,5 +35,3 @@ const Products = ({ list = [] }: Props) => {
     </ul>
   );
 };
-
-export default Products;

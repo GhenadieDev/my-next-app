@@ -1,14 +1,14 @@
-import Categories from "./categories";
 import useSWR from "swr";
-import { fetchData } from "../api/fetchData";
+import { fetchData } from "../../api/fetchData";
+import { Categories } from "../index";
 
-import styles from "../styles/Popup.module.scss";
+import styles from "./Popup.module.scss";
 
 interface Props {
   show: boolean;
 }
 
-const Popup = ({ show = false }: Props) => {
+export const Popup = ({ show = false }: Props) => {
   const { data } = useSWR(
     "https://fakestoreapi.com/products/categories",
     fetchData
@@ -24,5 +24,3 @@ const Popup = ({ show = false }: Props) => {
     </div>
   );
 };
-
-export default Popup;

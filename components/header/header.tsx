@@ -1,14 +1,13 @@
-import Input from "./Input";
+import { SetStateAction } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import styles from "../styles/Header.module.scss";
-import { SetStateAction } from "react";
+import styles from "./Header.module.scss";
 
 interface Props {
   setBurgerIsHover?: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const Header = ({ setBurgerIsHover }: Props) => {
+export const Header = ({ setBurgerIsHover }: Props) => {
   return (
     <header className={styles.header}>
       <div className={styles.burger_wrapper}>
@@ -22,9 +21,6 @@ const Header = ({ setBurgerIsHover }: Props) => {
           Categories
         </h2>
       </div>
-      <Input />
     </header>
   );
 };
-
-export default Header;

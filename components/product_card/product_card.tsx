@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "../types/interfaces";
+import { Product } from "../../types/interfaces";
 
-import styles from "../styles/ProductCard.module.scss";
+import styles from "./ProductCard.module.scss";
 
-const ProductCard = ({ image, title, price }: Product) => {
+export const ProductCard = ({ image, title, price }: Product) => {
   return (
     <div className={styles.product_card}>
       <div className={styles.image_wrapper}>
@@ -26,5 +26,3 @@ const ProductCard = ({ image, title, price }: Product) => {
     </div>
   );
 };
-
-export default ProductCard;

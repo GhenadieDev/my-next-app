@@ -8,3 +8,6 @@ export * from "./products/products";
 export * from "./select/select";
 export * from "./sortbar/sortbar";
 export * from "./button/button";
+export * from "./image/image";
+export * from "./product_info/product_info";
+export * from "./product_wrapper/product_wrapper";

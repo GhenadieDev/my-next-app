@@ -1,0 +1,11 @@
+.img_wrapper {
+  position: relative;
+  width: 40%;
+  height: 60vh;
+}
+
+@media (max-width: 839px) {
+  .img_wrapper {
+    width: 100%;
+  }
+}

@@ -6,9 +6,12 @@ import {
   NextPage,
 } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
-import { Button } from "../../components/index";
+import {
+  ProductImage,
+  ProductInfo,
+  ProductWrapper,
+} from "../../components/index";
 
 import { Product } from "../../types/interfaces";
 
@@ -23,36 +26,16 @@ const ProductDetails: NextPage = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div>
+      <div style={{ padding: "0 20px" }}>
         <h1>{product.title}</h1>
-        <div
-          className="flex-container"
-          style={{ display: "flex", columnGap: "20px" }}
-        >
-          <div
-            className="img-wrapper"
-            style={{
-              display: "block",
-              flex: "1",
-            }}
-          >
-            <Image
-              src={product.image}
-              width="400px"
-              height="400px"
-              layout="responsive"
-              alt="product image"
-            />
-          </div>
-          <div className="info" style={{ flex: "2" }}>
-            <p style={{ fontSize: "32px", margin: 0 }}>{product.price}</p>
-            <Button>Add to cart</Button>
-            <p>
-              rating: <span>{product.rating.rate}</span>
-            </p>
-            <p style={{ fontSize: "20px" }}>{product.description}</p>
-          </div>
-        </div>
+        <ProductWrapper>
+          <ProductImage image={product.image} />
+          <ProductInfo
+            price={product.price}
+            rating={product.rating.rate}
+            description={product.description}
+          />
+        </ProductWrapper>
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+.flex_container {
+  display: flex;
+  column-gap: 20px;
+}
+
+@media (max-width: 839px) {
+  .flex_container {
+    flex-direction: column;
+  }
+}
